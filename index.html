@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YORK Chiller Systems & Heat Exchangers Research</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Title -->
+        <div class="slide active" data-slide="1">
+            <div class="slide-content">
+                <div class="title-slide">
+                    <h1 class="main-title">YORK Chiller Systems</h1>
+                    <h2 class="subtitle">& Heat Exchangers Research</h2>
+                    <div class="title-decoration"></div>
+                    <p class="presentation-subtitle">Psychrometric Analysis and Application in York Rooftop Units</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Building Load Components -->
+        <div class="slide" data-slide="2">
+            <div class="slide-content">
+                <h1 class="slide-title">Understanding Building Load Components</h1>
+                <div class="content-grid">
+                    <div class="load-item">
+                        <div class="icon-circle total-load">
+                            <span class="icon">🏢</span>
+                        </div>
+                        <h3>Total Cooling Load</h3>
+                        <p>Total heat removal required (Btuh/kW)</p>
+                    </div>
+                    <div class="load-item">
+                        <div class="icon-circle sensible-load">
+                            <span class="icon">🌡️</span>
+                        </div>
+                        <h3>Sensible Load</h3>
+                        <p>Heat affecting temperature (dry-bulb)</p>
+                    </div>
+                    <div class="load-item">
+                        <div class="icon-circle latent-load">
+                            <span class="icon">💧</span>
+                        </div>
+                        <h3>Latent Load</h3>
+                        <p>Heat associated with moisture content</p>
+                    </div>
+                </div>
+                <div class="formula-box">
+                    <h4>Sensible Heat Ratio (SHR)</h4>
+                    <div class="formula">SHR = Sensible Load / Total Load</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Key Air-Side Parameters -->
+        <div class="slide" data-slide="3">
+            <div class="slide-content">
+                <h1 class="slide-title">Key Air-Side Parameters & Design Conditions</h1>
+                <div class="parameters-container">
+                    <div class="parameter-card">
+                        <h3>Airflow (CFM)</h3>
+                        <p>Volume of air moved by RTU fan system</p>
+                        <div class="metric">Cubic Feet per Minute</div>
+                    </div>
+                    <div class="parameter-card">
+                        <h3>Entering Air Conditions</h3>
+                        <ul>
+                            <li><strong>EDB:</strong> Entering Dry-Bulb Temperature</li>
+                            <li><strong>EWB:</strong> Entering Wet-Bulb Temperature</li>
+                        </ul>
+                    </div>
+                    <div class="parameter-card">
+                        <h3>Outside Air Design</h3>
+                        <p>Ambient conditions for peak performance</p>
+                        <div class="metric">Based on ASHRAE Standards</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Fan System Heat Addition -->
+        <div class="slide" data-slide="4">
+            <div class="slide-content">
+                <h1 class="slide-title">Fan System's Critical Role: Heat Addition</h1>
+                <div class="fan-heat-container">
+                    <div class="concept-box">
+                        <h3>Motor vs. Brake Horsepower</h3>
+                        <div class="hp-comparison">
+                            <div class="hp-item">
+                                <strong>Motor HP:</strong> Nameplate rating
+                            </div>
+                            <div class="hp-item">
+                                <strong>Brake HP (BHP):</strong> Actual power required
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formula-highlight">
+                        <h3>Supply Fan Heat Addition Formula</h3>
+                        <div class="big-formula">
+                            Supply Fan Heat (Btuh) = BHP × 2,750
+                        </div>
+                        <p class="formula-note">Constant 2,750 accounts for motor efficiency and energy conversion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Altitude Impact -->
+        <div class="slide" data-slide="5">
+            <div class="slide-content">
+                <h1 class="slide-title">Impact of Altitude on Performance</h1>
+                <div class="altitude-effects">
+                    <div class="effect-card">
+                        <div class="altitude-icon">⛰️</div>
+                        <h3>Higher Elevation = Less Dense Air</h3>
+                    </div>
+                    <div class="effects-grid">
+                        <div class="effect-item">
+                            <h4>Fan Performance</h4>
+                            <p>Same CFM moves less mass of air, reducing heat transfer capability</p>
+                        </div>
+                        <div class="effect-item">
+                            <h4>Condenser Performance</h4>
+                            <p>Thinner air less effective at heat rejection, higher condensing pressures</p>
+                        </div>
+                    </div>
+                    <div class="correction-note">
+                        <strong>Solution:</strong> Apply Altitude Correction Factors to capacity and fan performance
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Design Requirements -->
+        <div class="slide" data-slide="6">
+            <div class="slide-content">
+                <h1 class="slide-title">York RTU Application - Design Requirements</h1>
+                <div class="requirements-grid">
+                    <div class="req-group">
+                        <h3>Cooling Specifications</h3>
+                        <ul>
+                            <li>Total Cooling: <strong>600,000 Btuh</strong></li>
+                            <li>Sensible Cooling: <strong>450,000 Btuh</strong></li>
+                            <li>Supply Airflow: <strong>19,000 CFM</strong></li>
+                        </ul>
+                    </div>
+                    <div class="req-group">
+                        <h3>Operating Conditions</h3>
+                        <ul>
+                            <li>ESP: <strong>2.00 in. w.g.</strong></li>
+                            <li>Entering Air: <strong>80°F DB / 67°F WB</strong></li>
+                            <li>Outside Design: <strong>95°F</strong></li>
+                        </ul>
+                    </div>
+                    <div class="req-group">
+                        <h3>Additional Features</h3>
+                        <ul>
+                            <li>Electrical: <strong>460V/3-Phase/60Hz</strong></li>
+                            <li>Economizer & MERV 8 filters</li>
+                            <li>Variable Air Volume (VAV) control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Cooling Calculations -->
+        <div class="slide" data-slide="7">
+            <div class="slide-content">
+                <h1 class="slide-title">Cooling Capacity Calculations</h1>
+                <div class="calculation-steps">
+                    <div class="calc-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Fan Requirements</h3>
+                            <p>At 19,000 CFM and 3.38 iwg TSP:</p>
+                            <div class="calc-result">RPM = 1397 | BHP = 19.3</div>
+                        </div>
+                    </div>
+                    <div class="calc-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Fan Heat Addition</h3>
+                            <div class="calc-formula">19.3 HP × 2,750 = 53,000 Btuh</div>
+                        </div>
+                    </div>
+                    <div class="calc-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Required Capacity</h3>
+                            <div class="calc-formula">600 MBH + 53 MBH = 653 MBH (54.4 tons)</div>
+                            <div class="selection-result">Selection: 60 tons nominal</div>
+                        </div>
+                    </div>
+                    <div class="calc-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Supply Air Temperature</h3>
+                            <div class="calc-result">LAT: 59.7°F DB / 55.5°F WB</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Heating System Selection -->
+        <div class="slide" data-slide="8">
+            <div class="slide-content">
+                <h1 class="slide-title">Heating System Selection</h1>
+                <div class="heating-options">
+                    <div class="heating-card gas-heating">
+                        <div class="heating-icon">🔥</div>
+                        <h3>Gas Heating Module</h3>
+                        <div class="heating-specs">
+                            <p><strong>Requirement:</strong> 400,000 Btuh (400 MBH)</p>
+                            <p><strong>Selection:</strong> 500 MBH Gas Furnace</p>
+                            <div class="model-code">Model: C2 (Staged gas with stainless steel burner)</div>
+                        </div>
+                    </div>
+                    <div class="heating-card electric-heating">
+                        <div class="heating-icon">⚡</div>
+                        <h3>Electric Heating Module</h3>
+                        <div class="heating-specs">
+                            <p><strong>Requirement:</strong> 400,000 Btuh</p>
+                            <p><strong>Selection:</strong> 120 kW Electric Heat</p>
+                            <div class="model-code">Model: M4 (Low SCR electric heat)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="selection-note">
+                    Both options exceed the 400 MBH requirement and are available on the 60-ton unit
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Supply Fan Selection -->
+        <div class="slide" data-slide="9">
+            <div class="slide-content">
+                <h1 class="slide-title">Supply Fan Speed & Horsepower Requirements</h1>
+                <div class="fan-selection-container">
+                    <div class="pressure-breakdown">
+                        <h3>Static Pressure Components</h3>
+                        <div class="pressure-items">
+                            <div class="pressure-item">
+                                <strong>External Static Pressure (ESP):</strong> 2.00 in. w.g.
+                            </div>
+                            <div class="pressure-item">
+                                <strong>Internal Static Pressure (ISP):</strong> 1.38 in. w.g.
+                            </div>
+                            <div class="pressure-total">
+                                <strong>Total Static Pressure (TSP):</strong> 3.38 in. w.g.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fan-specs">
+                        <h3>Supply Fan Specifications</h3>
+                        <div class="spec-grid">
+                            <div class="spec-item">
+                                <strong>CFM:</strong> 19,000
+                            </div>
+                            <div class="spec-item">
+                                <strong>RPM:</strong> 1397
+                            </div>
+                            <div class="spec-item">
+                                <strong>BHP:</strong> 19.3
+                            </div>
+                            <div class="spec-item">
+                                <strong>Motor:</strong> 20HP × 2 (Dual DDP)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Exhaust Fan Selection -->
+        <div class="slide" data-slide="10">
+            <div class="slide-content">
+                <h1 class="slide-title">Exhaust Fan Requirements</h1>
+                <div class="exhaust-fan-container">
+                    <div class="exhaust-specs">
+                        <h3>Design Parameters</h3>
+                        <div class="exhaust-grid">
+                            <div class="exhaust-item">
+                                <strong>Exhaust Air Capacity:</strong> 12,000 CFM
+                            </div>
+                            <div class="exhaust-item">
+                                <strong>Return Duct Static:</strong> 0.60 iwg
+                            </div>
+                            <div class="exhaust-item">
+                                <strong>Damper Pressure Drop:</strong> 0.26 iwg
+                            </div>
+                            <div class="exhaust-item total">
+                                <strong>Total Static Pressure:</strong> 0.86 iwg
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exhaust-results">
+                        <h3>Selection Results</h3>
+                        <div class="result-box">
+                            <div class="result-item">
+                                <strong>RPM:</strong> 290 (interpolated)
+                            </div>
+                            <div class="result-item">
+                                <strong>BHP:</strong> 2.5 (interpolated)
+                            </div>
+                            <div class="result-item">
+                                <strong>Motor:</strong> 5 HP with VFD
+                            </div>
+                            <div class="model-final">
+                                <strong>Model Code:</strong> 2BF (Exhaust with VFD and backdraft damper)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="conclusion">
+                    <h3>Project Complete</h3>
+                    <p>60-ton York RTU properly sized for all system requirements</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn prev-btn" onclick="previousSlide()">‹</button>
+        <div class="slide-counter">
+            <span class="current-slide">1</span> / <span class="total-slides">10</span>
+        </div>
+        <button class="nav-btn next-btn" onclick="nextSlide()">›</button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
