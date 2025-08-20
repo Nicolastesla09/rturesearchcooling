@@ -1361,15 +1361,9 @@ export default function YorkPresentation() {
                     <div key={key} className="bg-white p-2 rounded">
                       <strong>{key.replace(/([A-Z])/g, " $1").trim()}:</strong>
                       {key === "result" ? (
-                        <span>
-                          {" "}2BJ for digits 19-21, {" "}
-                          <button
-                            onClick={() => setShowExhaustNomenclature(true)}
-                            className="text-blue-600 hover:text-blue-800 underline font-medium cursor-pointer"
-                          >
-                            see picture
-                          </button>
-                        </span>
+                        <div>
+                          • {slide.content.exhaustFan.selection.nomenclature.result.split(", see picture")[0]}
+                        </div>
                       ) : (
                         <span> {value as string}</span>
                       )}
