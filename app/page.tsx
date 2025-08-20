@@ -19,6 +19,7 @@ export default function YorkPresentation() {
   const [showSupplyFanNomenclature, setShowSupplyFanNomenclature] = useState(false)
   const [showExhaustTable3, setShowExhaustTable3] = useState(false)
   const [showRTUVisualization, setShowRTUVisualization] = useState(false)
+  const [showExhaustNomenclature, setShowExhaustNomenclature] = useState(false)
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
@@ -557,7 +558,7 @@ export default function YorkPresentation() {
             },
             nomenclature: {
               digit19: "Option 2 - Exhaust with VFD and backdraft damper",
-              digit20: "Option B - Exhaust fan with 1 in. spring isolation",
+              digit20: "Option B - Exhaust fan with 1 in. spring isolation", 
               digit21: "Option J - 15 HP exhaust fan motor",
               result: "2BJ for digits 19-21",
             },
@@ -1359,7 +1360,20 @@ export default function YorkPresentation() {
                 <div className="space-y-2 text-sm">
                   {Object.entries(slide.content.exhaustFan.selection.nomenclature).map(([key, value]) => (
                     <div key={key} className="bg-white p-2 rounded">
-                      <strong>{key.replace(/([A-Z])/g, " $1").trim()}:</strong> {value as string}
+                      <strong>{key.replace(/([A-Z])/g, " $1").trim()}:</strong> 
+                      {key === "result" ? (
+                        <span>
+                          {" "}2BJ for digits 19-21, {" "}
+                          <button
+                            onClick={() => setShowExhaustNomenclature(true)}
+                            className="text-blue-600 hover:text-blue-800 underline font-medium cursor-pointer"
+                          >
+                            see picture
+                          </button>
+                        </span>
+                      ) : (
+                        <span> {value as string}</span>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -1790,6 +1804,31 @@ export default function YorkPresentation() {
                   Cutaway view showing air flow through York RTU with temperature conditions: Outside Air (95°F), Return
                   Air (75°F), and Supply Air (56.5°F)
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showExhaustNomenclature && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto">
+            <div className="p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-xl font-bold text-gray-900">Exhaust Fan Nomenclature Selection</h3>
+                <button
+                  onClick={() => setShowExhaustNomenclature(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+                >
+                  ×
+                </button>
+              </div>
+              <div className="flex justify-center">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1755656737478.png"
+                  alt="Exhaust Fan Nomenclature Table showing digits 19-21 options"
+                  className="max-w-full h-auto border border-gray-300 rounded"
+                />
               </div>
             </div>
           </div>
