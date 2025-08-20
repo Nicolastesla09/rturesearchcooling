@@ -1824,7 +1824,7 @@ export default function YorkPresentation() {
               </div>
               <div className="flex justify-center">
                 <img
-                  src="/attached_assets/image_1755660273166.png"
+                  src="/attached_assets/image_1755660513894.png"
                   alt="Building pressure control and return/exhaust fan nomenclature table showing digits 19-21 options with highlighted selections 2BJ"
                   className="max-w-full h-auto border border-gray-300 rounded"
                 />
