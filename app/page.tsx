@@ -1360,13 +1360,7 @@ export default function YorkPresentation() {
                   {Object.entries(slide.content.exhaustFan.selection.nomenclature).map(([key, value]) => (
                     <div key={key} className="bg-white p-2 rounded">
                       <strong>{key.replace(/([A-Z])/g, " $1").trim()}:</strong>
-                      {key === "result" ? (
-                        <div>
-                          • {slide.content.exhaustFan.selection.nomenclature.result.split(", see picture")[0]}
-                        </div>
-                      ) : (
-                        <span> {value as string}</span>
-                      )}
+                      <span> {value as string}</span>
                     </div>
                   ))}
                 </div>
