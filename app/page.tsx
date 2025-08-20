@@ -1360,7 +1360,19 @@ export default function YorkPresentation() {
                   {Object.entries(slide.content.exhaustFan.selection.nomenclature).map(([key, value]) => (
                     <div key={key} className="bg-white p-2 rounded">
                       <strong>{key.replace(/([A-Z])/g, " $1").trim()}:</strong>
-                      <span> {value as string}</span>
+                      {key === "result" ? (
+                        <span>
+                          {" "}2BJ for digits 19-21,{" "}
+                          <button
+                            onClick={() => setShowExhaustNomenclature(true)}
+                            className="text-blue-600 hover:text-blue-800 underline font-medium cursor-pointer"
+                          >
+                            see picture
+                          </button>
+                        </span>
+                      ) : (
+                        <span> {value as string}</span>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -1812,7 +1824,7 @@ export default function YorkPresentation() {
               </div>
               <div className="flex justify-center">
                 <img
-                  src="/attached_assets/image_1755658021338.png"
+                  src="/attached_assets/image_1755659978942.png"
                   alt="Building pressure control and return/exhaust fan nomenclature table showing digits 19-21 options with highlighted selections 2BJ"
                   className="max-w-full h-auto border border-gray-300 rounded"
                 />
