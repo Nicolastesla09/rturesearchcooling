@@ -1812,10 +1812,10 @@ export default function YorkPresentation() {
 
       {showExhaustNomenclature && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-auto">
+          <div className="bg-white rounded-lg max-w-6xl w-full max-h-[90vh] overflow-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-xl font-bold text-gray-900">Exhaust Fan Nomenclature Selection</h3>
+                <h3 className="text-xl font-bold text-gray-900">Building Pressure Control & Return/Exhaust Fan Options (Digits 19-21)</h3>
                 <button
                   onClick={() => setShowExhaustNomenclature(false)}
                   className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
@@ -1825,10 +1825,18 @@ export default function YorkPresentation() {
               </div>
               <div className="flex justify-center">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1755656737478.png"
-                  alt="Exhaust Fan Nomenclature Table showing digits 19-21 options"
+                  src="/attached_assets/image_1755656737478.png"
+                  alt="Building pressure control and return/exhaust fan nomenclature table showing digits 19-21 options with highlighted selections 2BJ"
                   className="max-w-full h-auto border border-gray-300 rounded"
                 />
+              </div>
+              <div className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200">
+                <h4 className="font-semibold text-green-800 mb-2">Selected Options (2BJ):</h4>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li><strong>Digit 19:</strong> Option 2 - Exhaust with VFD and backdraft damper</li>
+                  <li><strong>Digit 20:</strong> Option B - Exhaust fan with 1 in. spring isolation</li>
+                  <li><strong>Digit 21:</strong> Option J - 15 HP exhaust fan motor</li>
+                </ul>
               </div>
             </div>
           </div>
