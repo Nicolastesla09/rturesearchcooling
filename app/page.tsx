@@ -206,7 +206,7 @@ export default function YorkPresentation() {
     },
     {
       id: 6,
-      title: "York RTU Application - Design Requirements (90-150 Ton)",
+      title: "York RTU Application - Design Requirements",
       subtitle: "Project specifications and given parameters",
       type: "project-specs",
       content: {
