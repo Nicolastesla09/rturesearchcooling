@@ -563,39 +563,7 @@ export default function YorkPresentation() {
             },
           },
         },
-        systemSummary: {
-          title: "Complete York RTU System Specifications",
-          cooling: {
-            capacity: "90 tons nominal (1,038 MBH actual requirement)",
-            sensible: "634.53 MBH net sensible (after fan heat)",
-            shr: "0.62 (moderate sensible load)",
-          },
-          heating: {
-            options: "Gas: 1,000 MBH or Electric: 280 kW",
-            selection: "Based on utility availability and operating cost preference",
-          },
-          airflow: {
-            supply: "25,000 CFM at 3.5 iwg TSP",
-            exhaust: "24,000 CFM at 1.25 iwg TSP",
-            motors: "Supply: 30HP, Exhaust: 15HP",
-          },
-          controls: {
-            features: "VAV control, economizer operation",
-            filtration: "2 in. throwaway filters",
-            electrical: "460V/3-phase/60Hz",
-          },
-        },
-        conclusion: {
-          title: "Conclusion",
-          recommendation: "Choose Johnson Controls® Premier Rooftop Unit",
-          link: "https://www.johnsoncontrols.com/hvac-equipment/rooftop-units/premier",
-          benefits: [
-            "Comprehensive psychrometric analysis performed",
-            "All load calculations verified with fan heat inclusion",
-            "Proper equipment sizing with adequate margins",
-            "Complete system integration designed",
-          ],
-        },
+        
       },
     },
     {
